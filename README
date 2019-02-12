@@ -1,0 +1,3 @@
+Trying to compile and extend the bottle example from the docs.
+Both the Makefile and the CMakeLists.txt work now.
+Dependencies: Just install the debian packages *occt* libtbb-dev

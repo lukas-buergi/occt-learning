@@ -1,4 +1,4 @@
 No idea. Work derived from:
 1 opencascade docs, bottle tutorial so presumably LGPL 2.1,
-2 the makefile is from https://www.opencascade.com/content/guide-compilation-make-bottle-tutorial-linux-ubuntu-1210
-without any rights granted.
+2 Both make and cmake files are adapted from https://www.opencascade.com/content/guide-compilation-make-bottle-tutorial-linux-ubuntu-1210
+without any rights granted explicitly

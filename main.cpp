@@ -1,3 +1,5 @@
+
+// includes for modelling
 #include <BRep_Tool.hxx>
 
 #include <BRepAlgoAPI_Fuse.hxx>
@@ -52,6 +54,10 @@
 
 #include <TopTools_ListOfShape.hxx>
 
+// include for writing models to files
+#include <StlAPI_Writer.hxx>
+
+// standard
 #include <stdio.h>
 
 TopoDS_Shape MakeBottle(
@@ -198,8 +204,12 @@ TopoDS_Shape MakeBottle(
 
 int main(int argc, char * argv[])
 {
-  MakeBottle(50, 80, 30);
+  TopoDS_Shape output = MakeBottle(50, 80, 30);
   printf("ran MakeBottle(50, 80, 30)\n");
+  StlAPI_Writer writer = StlAPI_Writer();
+  printf("created writer\n");
+  writer.Write(output, "out.stl");
+  printf("wrote file\n");
   return 0;
 }
 
